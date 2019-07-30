@@ -1,0 +1,7 @@
+c:\Users\EGOS - TI Sistemas\Downloads>postgresql-11.4-3-windows-x64.exe --mode unattended --unattendedmodeui none 
+--disable-components pgAdmin --superpassword useregospostgresql@15 --servicepassword useregospostgresql@15
+--serverport 5432 --prefix "C:\Progam Files\PostgreSQL\11" --datadir "C:\Progam Files\PostgreSQL\11\data"
+
+postgresql-11.4-3-windows-x64.exe --mode unattended --unattendedmodeui none --disable-components pgAdmin 
+--superpassword useregospostgresql@15 --servicepassword useregospostgresql@15 
+--serverport 5432 --prefix "C:\Program Files\PostgreSQL\11" --datadir "C:\Program Files\PostgreSQL\11\data"
