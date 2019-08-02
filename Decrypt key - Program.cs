@@ -11,7 +11,7 @@ namespace Decrypt_Registry_Key
         static void Main(string[] args)
         {
             //hash
-            string hash = "&eg0s@so%%luçõ&s&*";
+            string hash = "meuhash_%%$$";
 
             string data_decrypt = String.Empty;
 
