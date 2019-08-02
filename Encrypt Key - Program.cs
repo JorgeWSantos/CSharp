@@ -8,7 +8,7 @@ namespace Registry_Key_Encripted
     class Program
     {
         //hash usado para a criptografia
-        private static string hash = "&eg0s@so%%luçõ&s&*";
+        private static string hash = "meuhash_&&%%";
 
         static void Main(string[] args)
         {
