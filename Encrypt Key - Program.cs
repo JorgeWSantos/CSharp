@@ -13,7 +13,7 @@ namespace Registry_Key_Encripted
         static void Main(string[] args)
         {
             //conferindo a existencia da key
-            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\SGP"))
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\PASTA"))
             {
                 //se a key NÂO existir é CRIADA.
                 //caso EXISTA, NADA é ALTERADO.
@@ -47,7 +47,7 @@ namespace Registry_Key_Encripted
             }
 
             //criando key
-            using (RegistryKey key = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\SGP"))
+            using (RegistryKey key = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\PASTA"))
             {
                 //setando o value da 'key'
                 key.SetValue("st", $"{data_encrypt}");
