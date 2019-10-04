@@ -16,7 +16,7 @@ namespace Decrypt_Registry_Key
             string data_decrypt = String.Empty;
 
             //abrindo a key
-            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\SGP"))
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\PASTA"))
             {
                 //se a key existir
                 if (key != null)
@@ -68,7 +68,7 @@ namespace Decrypt_Registry_Key
                     }
                     catch (FormatException)//caso a data seja alterada, o formato decriptado ira vir em formato errado.
                     {
-                        Registry.LocalMachine.DeleteSubKey(@"SOFTWARE\SGP");//deleta a subkey
+                        Registry.LocalMachine.DeleteSubKey(@"SOFTWARE\PASTA");//deleta a subkey
 
                         MessageBox.Show("Sua licença expirou, entre em contato com a EGOS-TI\n para obter uma versão atualizada.", 
                                         "", MessageBoxButtons.OK, 
