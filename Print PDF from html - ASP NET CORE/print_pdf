@@ -1,0 +1,6 @@
+*versão do net core*
+netcoreapp2.2
+
+*estou usando a biblioteca IronPdf*
+IronPdf" Version="2019.7.0" 
+https://ironpdf.com/#using-html-to-create-a-pdf
