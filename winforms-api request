@@ -1,0 +1,30 @@
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Headers;
+
+private async void Button1_Click(object sender, EventArgs e)
+{
+    Login login = new Login();
+    int ndoc = 7;
+
+    using (HttpClient client = new HttpClient())
+    {
+        client.BaseAddress = new Uri("http://192.168.1.113/v1/Login/Logar");
+        client.DefaultRequestHeaders.Add("login", "s2334sdf");
+        client.DefaultRequestHeaders.Add("senha", "s2334sdf");
+
+        var res = await client.PostAsync("",null);
+        string dados = await res.Content.ReadAsStringAsync();
+        login = JsonConvert.DeserializeObject<Login>(dados);
+    }
+
+    using (HttpClient client = new HttpClient())
+    {
+        client.BaseAddress = new Uri($"http://192.168.1.113/v1/Pedidos_Detalhes/select/{ndoc}");
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", login.accessToken);
+
+        var res = await client.GetAsync("");
+        string dados = await res.Content.ReadAsStringAsync();
+        List<pedido_detalhe> list = JsonConvert.DeserializeObject<List<pedido_detalhe>>(dados);
+    }
+}
